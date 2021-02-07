@@ -84,7 +84,7 @@ export class GetAllMoviesService {
   }
 
   //Non-typed response extraction
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -119,7 +119,7 @@ export class GetSingleMovieService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -154,7 +154,7 @@ export class GetDirectorService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -189,7 +189,7 @@ export class GetGenreService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -224,7 +224,7 @@ export class GetUserService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -259,7 +259,7 @@ export class GetFavoriteMoviesService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -294,7 +294,7 @@ export class AddFavoriteMovieService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -329,7 +329,7 @@ export class DeleteFavoriteMovieService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -364,7 +364,7 @@ export class EditUserService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
@@ -399,7 +399,7 @@ export class DeleteUserService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
-  private extractResponseData(res: Response): any {
+  private extractResponseData(res: Object): any {
     const body = res;
     return body || {};
   }
