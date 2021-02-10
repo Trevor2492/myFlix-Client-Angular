@@ -415,3 +415,7 @@ export class DeleteUserService {
     return throwError('Something bad happened: please try again later.');
   }
 }
+
+export class FetchApiDataService {
+  constructor() {}
+}
