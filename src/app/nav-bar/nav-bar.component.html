@@ -1,16 +1,36 @@
 <div class="nav">
   <div class="nav_container">
-    <div routerLink="/movies" class="nav_title">
-      <h1>myFlix</h1>
-    </div>
+
+    <button 
+      mat-button
+      color="primary"
+      routerLink="/movies" 
+      class="nav_title"
+    >
+      MyFlix
+    </button>
+
     <div class="nav_buttons">
-			<button routerLink="/profile" class="profile">
+
+      <button 
+        mat-button
+        color="primary"
+        routerLink="/profile" 
+        class="profile"
+      >
 				Profile
 			</button>
 			
-      <button class="logout" (click)="logoutUser()" routerLink="/">
+      <button
+        mat-button
+        color="primary"
+        class="logout" 
+        (click)="logoutUser()" 
+        routerLink="/"
+      >
         Logout
       </button>
+
     </div>
   </div>
 </div>

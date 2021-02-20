@@ -1,3 +1,18 @@
+.nav_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(108, 120, 194, 0.281);
+}
+
+.nav_title {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
 .nav_title:hover {
   cursor: pointer;
 }
