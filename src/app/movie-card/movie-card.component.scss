@@ -1,0 +1,28 @@
+img {
+  width: 356px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.movie-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: rgba(108, 120, 194, 0.281);
+}
+
+.movie-card {
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.movie-card:hover {
+  margin: 15px;
+  border-radius: 15px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}

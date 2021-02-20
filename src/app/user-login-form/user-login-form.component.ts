@@ -12,6 +12,9 @@ import {
 // This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+// Allows for routing
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
@@ -23,7 +26,8 @@ export class UserLoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: UserLoginService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    public router: Router // You have to add this line to be able to use 'router'
   ) {}
 
   ngOnInit(): void {}
@@ -34,16 +38,15 @@ export class UserLoginFormComponent implements OnInit {
       (result: any) => {
         // Logic for a successful user login goes here!
         this.dialogRef.close(); // Closes the modal on success
-        console.log(result);
         // Add the username and token to localStorage here
         localStorage.setItem('user', result.user.Username);
         localStorage.setItem('token', result.token);
-        this.snackBar.open(result, 'OK', {
+        this.snackBar.open('Login Successful', 'OK', {
           duration: 2000,
         });
+        this.router.navigate(['movies']); // routes to the 'movie-card' view
       },
       (result: any) => {
-        console.log(result);
         this.snackBar.open(result, 'OK', {
           duration: 2000,
         });

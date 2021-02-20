@@ -1,0 +1,23 @@
+.profile {
+  text-align: center;
+  align-items: center;
+  display: block;
+  max-width: 1400px;
+}
+
+mat-card-header {
+  text-align: center;
+  display: block;
+}
+
+img {
+  max-width: 300px;
+  min-width: 300px;
+  border-radius: 10px;
+}
+
+.favorite_cards {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
