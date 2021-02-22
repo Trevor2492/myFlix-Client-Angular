@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Find it in action here
 
-Hosted at https://Trevor2492.github.io/myFlix-Client-Angular/
+Hosted at https://trevor2492.github.io/myFlix-Client-Angular/
 
 ## Development server
 
