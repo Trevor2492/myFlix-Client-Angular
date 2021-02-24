@@ -11,6 +11,9 @@ import { map } from 'rxjs/operators';
 //Declaring the api url that will provide data for the client app
 const apiUrl = 'https://trevors-movies-api.herokuapp.com/';
 
+/**
+ * This class allows the user to register a new account
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -38,6 +41,9 @@ export class UserRegistrationService {
   }
 }
 
+/**
+ * This class allows the user to login to their account
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -63,6 +69,9 @@ export class UserLoginService {
   }
 }
 
+/**
+ * This class gets a list of all of the movies in the database and returns them as an array of objects
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -99,6 +108,9 @@ export class GetAllMoviesService {
   }
 }
 
+/**
+ * This class returns a single movie by title
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -134,6 +146,9 @@ export class GetSingleMovieService {
   }
 }
 
+/**
+ * This class returns a director as an object by name
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -169,6 +184,9 @@ export class GetDirectorService {
   }
 }
 
+/**
+ * This class returns a genre object when given a specific movie title
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -204,6 +222,9 @@ export class GetGenreService {
   }
 }
 
+/**
+ * This class returns a user object by username
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -240,6 +261,9 @@ export class GetUserService {
   }
 }
 
+/**
+ * This class gets a user's favorite movies by username
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -276,6 +300,9 @@ export class GetFavoriteMoviesService {
   }
 }
 
+/**
+ * This class adds a movie to a users list of favorites
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -312,6 +339,9 @@ export class AddFavoriteMovieService {
   }
 }
 
+/**
+ * This class removes a movie from a users list of favorites
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -348,6 +378,9 @@ export class DeleteFavoriteMovieService {
   }
 }
 
+/**
+ * This class allows a user to update their information
+ */
 @Injectable({
   providedIn: 'root',
 })
@@ -384,6 +417,9 @@ export class EditUserService {
   }
 }
 
+/**
+ * This class deletes a user from the database
+ */
 @Injectable({
   providedIn: 'root',
 })

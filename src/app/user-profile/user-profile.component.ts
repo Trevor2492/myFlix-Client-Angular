@@ -30,11 +30,16 @@ export class UserProfileComponent implements OnInit {
     public router: Router
   ) {}
 
+  /**
+   * Runs the getUser() function on initialization
+   */
   ngOnInit(): void {
     this.getUser();
   }
 
-  // This happens on initialization
+  /**
+   * Gets the user object from the database on initialization
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
@@ -42,6 +47,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Gets a list of all movies from the database
+   */
   getMovies(): void {
     this.fetchApiData2.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -49,6 +57,10 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Filters the list of movies into an array that matches the users favorites
+   * @returns {array}
+   */
   filterFavorites(): void {
     this.favorites = this.movies.filter((movie: any) =>
       this.user.FavoriteMovies.includes(movie._id)
@@ -56,6 +68,9 @@ export class UserProfileComponent implements OnInit {
     return this.favorites;
   }
 
+  /**
+   * Removes movies from the users favorites list
+   */
   removeFromFavorites(id: string, title: string): void {
     this.fetchApiData3.deleteFavoriteMovie(id).subscribe((resp: any) => {
       this.snackBar.open(
@@ -68,12 +83,18 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens a dialog box for the user to update their user details
+   */
   openUpdateProfileDialog(): void {
     this.dialog.open(UpdateProfileComponent, {
       width: '280px',
     });
   }
 
+  /**
+   * Deletes the user profile
+   */
   deleteProfile(): void {
     this.fetchApiData4.deleteUser().subscribe((resp: any) => {
       console.log('profile deleted');

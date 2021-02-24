@@ -1,19 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-// Use this to close the dialog on success
-import { MatDialogRef } from '@angular/material/dialog';
-
-// This imports in the API calls from the 'fetch-api-data.service'
+import { MatDialogRef } from '@angular/material/dialog'; // Use this to close the dialog on success
 import {
   FetchApiDataService,
   UserLoginService,
-} from '../fetch-api-data.service';
-
-// This import is used to display notifications back to the user
-import { MatSnackBar } from '@angular/material/snack-bar';
-
-// Allows for routing
-import { Router } from '@angular/router';
+} from '../fetch-api-data.service'; // This imports in the API calls from the 'fetch-api-data.service'
+import { MatSnackBar } from '@angular/material/snack-bar'; // This import is used to display notifications back to the user
+import { Router } from '@angular/router'; // Allows for routing
 
 @Component({
   selector: 'app-user-login-form',
@@ -32,11 +24,12 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // This is the function responsible for sending the form inputs to the backend
+  /**
+   * This is the function responsible for sending the form inputs to the backend when the user logs in
+   */
   userLogin(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result: any) => {
-        // Logic for a successful user login goes here!
         this.dialogRef.close(); // Closes the modal on success
         // Add the username and token to localStorage here
         localStorage.setItem('user', result.user.Username);

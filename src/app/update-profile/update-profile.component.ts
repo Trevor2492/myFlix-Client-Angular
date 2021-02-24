@@ -19,20 +19,21 @@ export class UpdateProfileComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /**
+   * Sends the updated user information to the database
+   */
   editUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe(
       (result: any) => {
         // Logic for a successful user edit goes here!
         this.dialogRef.close(); // Closes the modal on success
         localStorage.setItem('user', result.Username);
-        console.log(result);
         console.log('success');
         this.snackBar.open(result, 'OK', {
           duration: 2000,
         });
       },
       (result: any) => {
-        console.log(result);
         this.snackBar.open(result, 'OK', {
           duration: 2000,
         });

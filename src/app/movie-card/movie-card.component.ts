@@ -26,11 +26,16 @@ export class MovieCardComponent implements OnInit {
     public snackBar: MatSnackBar
   ) {}
 
+  /**
+   * Runs the getMovies() function on initialization
+   */
   ngOnInit(): void {
     this.getMovies();
   }
 
-  // This happens on initialization
+  /**
+   * Gets a list of all movies and stores them in an array
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -39,6 +44,9 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens a dialog box with a desctription of the movies' genre
+   */
   showGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreDialogComponent, {
       data: { name, description },
@@ -46,6 +54,9 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens a dialog box with a description of the movies' director
+   */
   showDirectorDialog(
     name: string,
     image: string,
@@ -59,6 +70,9 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens a dialog box with more details about the movie
+   */
   showDetailsDialog(
     title: string,
     description: string,
@@ -71,6 +85,9 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Adds the movie to the users list of favorites which is stored in the database
+   */
   addToFavorites(id: string, title: string): void {
     this.fetchApiData2.addFavoriteMovie(id).subscribe((resp: any) => {
       this.snackBar.open(`${title} added to your Favorites`, 'OK', {
@@ -79,6 +96,9 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * removes the movie from the users list of favorites
+   */
   removeFromFavorites(id: string, title: string): void {
     this.fetchApiData3.deleteFavoriteMovie(id).subscribe((resp: any) => {
       this.snackBar.open(`${title} removed from your Favorites`, 'OK', {
