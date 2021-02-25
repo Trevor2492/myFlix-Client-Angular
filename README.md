@@ -6,6 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Hosted at https://trevor2492.github.io/myFlix-Client-Angular/
 
+## Gif
+
+<img src="https://github.com/Trevor2492/meet/blob/master/Meet-App.gif" width="850" />
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
