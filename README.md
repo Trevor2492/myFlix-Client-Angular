@@ -8,7 +8,7 @@ Hosted at https://trevor2492.github.io/myFlix-Client-Angular/
 
 ## Gif
 
-<img src="https://github.com/Trevor2492/meet/blob/master/Meet-App.gif" width="850" />
+<img src="https://github.com/Trevor2492/myFlix-Client-Angular/blob/master/MyFlix-Angular.gif" width="850" />
 
 ## Development server
 
